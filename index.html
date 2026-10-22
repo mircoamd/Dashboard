@@ -2,24 +2,47 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>Dashboard Magazzino</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KPI Store 263</title>
 
 <style>
 
 body{
-    font-family:Arial;
-    background:#f5f5f5;
     margin:0;
+    font-family:Arial;
+    background:#f4f6f8;
 }
 
-.header{
-    background:#004a7c;
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:#003366;
     color:white;
+    position:fixed;
+}
+
+.sidebar h2{
     padding:20px;
 }
 
-.container{
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    padding:15px 20px;
+}
+
+.main{
+    margin-left:220px;
     padding:20px;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .card{
@@ -27,31 +50,61 @@ body{
     width:250px;
     padding:20px;
     border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 .numero{
     font-size:40px;
-    color:#004a7c;
+    color:#005a9c;
 }
 
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="header">
-    <h1>Dashboard Mirco</h1>
+<div class="sidebar">
+<h2>Store 263</h2>
+
+<ul>
+<li>Home</li>
+<li>GED</li>
+<li>Telefonia</li>
+<li>PED</li>
+<li>Storico</li>
+</ul>
 </div>
 
-<div class="container">
+<div class="main">
+
+<h1>KPI Genova Vittoria</h1>
+
+<div class="cards">
 
 <div class="card">
-    <h3>Negativi M001</h3>
-    <div class="numero">25</div>
+<h3>Fatturato</h3>
+<div class="numero">41.315 €</div>
+</div>
+
+<div class="card">
+<h3>Garanzie</h3>
+<div class="numero">1.932 €</div>
+</div>
+
+<div class="card">
+<h3>Servizi</h3>
+<div class="numero">404 €</div>
+</div>
+
+<div class="card">
+<h3>Trasporti</h3>
+<div class="numero">1.407 €</div>
+</div>
+
 </div>
 
 </div>
 
 </body>
 </html>
+
