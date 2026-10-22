@@ -2,104 +2,210 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KPI Store 263</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KPI Genova Vittoria</title>
 
 <style>
 
-body{
+*{
     margin:0;
-    font-family:Arial;
-    background:#f4f6f8;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
 }
 
 .sidebar{
-    width:220px;
+    width:230px;
     height:100vh;
-    background:#003366;
-    color:white;
     position:fixed;
+    background:#003b6f;
+    color:white;
+    padding:20px;
 }
 
 .sidebar h2{
-    padding:20px;
+    margin-bottom:30px;
 }
 
-.sidebar ul{
-    list-style:none;
-    padding:0;
+.menu div{
+    padding:12px;
+    margin-bottom:5px;
+    border-radius:5px;
+    cursor:pointer;
 }
 
-.sidebar li{
-    padding:15px 20px;
+.menu div:hover{
+    background:#00539b;
 }
 
 .main{
-    margin-left:220px;
+    margin-left:250px;
     padding:20px;
 }
 
+.header{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
 .cards{
-    display:flex;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
-    flex-wrap:wrap;
 }
 
 .card{
     background:white;
-    width:250px;
     padding:20px;
     border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-.numero{
-    font-size:40px;
-    color:#005a9c;
+.card h3{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.card .value{
+    font-size:36px;
+    font-weight:bold;
+    color:#003b6f;
+}
+
+.table-box{
+    margin-top:25px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#003b6f;
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
 }
 
 </style>
 
 </head>
+
 <body>
 
 <div class="sidebar">
-<h2>Store 263</h2>
 
-<ul>
-<li>Home</li>
-<li>GED</li>
-<li>Telefonia</li>
-<li>PED</li>
-<li>Storico</li>
-</ul>
+<h2>📊 KPI Store</h2>
+
+<div class="menu">
+<div>Dashboard</div>
+<div>Negozio</div>
+<div>Reparti</div>
+<div>Garanzie</div>
+<div>Servizi</div>
+<div>Trasporti</div>
+<div>Storico</div>
+</div>
+
 </div>
 
 <div class="main">
 
-<h1>KPI Genova Vittoria</h1>
+<div class="header">
+<h1>Genova Vittoria - 263</h1>
+<p>Cruscotto giornaliero</p>
+</div>
 
 <div class="cards">
 
 <div class="card">
 <h3>Fatturato</h3>
-<div class="numero">41.315 €</div>
+<div class="value">€ 41.315</div>
 </div>
 
 <div class="card">
 <h3>Garanzie</h3>
-<div class="numero">1.932 €</div>
+<div class="value">€ 1.932</div>
 </div>
 
 <div class="card">
 <h3>Servizi</h3>
-<div class="numero">404 €</div>
+<div class="value">€ 404</div>
 </div>
 
 <div class="card">
 <h3>Trasporti</h3>
-<div class="numero">1.407 €</div>
+<div class="value">€ 1.407</div>
 </div>
+
+<div class="card">
+<h3>Scontrini</h3>
+<div class="value">330</div>
+</div>
+
+<div class="card">
+<h3>Redemption</h3>
+<div class="value">35%</div>
+</div>
+
+</div>
+
+<div class="table-box">
+
+<h2>Andamento Reparti</h2>
+
+<br>
+
+<table>
+
+<tr>
+<th>Reparto</th>
+<th>Fatturato</th>
+<th>Delta</th>
+</tr>
+
+<tr>
+<td>Telefonia</td>
+<td>€ 16.923</td>
+<td>+27%</td>
+</tr>
+
+<tr>
+<td>Consumer</td>
+<td>€ 5.677</td>
+<td>-26%</td>
+</tr>
+
+<tr>
+<td>GED</td>
+<td>€ 7.314</td>
+<td>-1%</td>
+</tr>
+
+<tr>
+<td>PED</td>
+<td>€ 2.123</td>
+<td>-56%</td>
+</tr>
+
+</table>
 
 </div>
 
@@ -107,4 +213,3 @@ body{
 
 </body>
 </html>
-
