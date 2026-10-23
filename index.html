@@ -210,6 +210,11 @@ td{
 </div>
 
 </div>
+
+<button onclick="salvaDati()">
+    Salva KPI
+</button>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
@@ -222,6 +227,31 @@ const supabaseClient = supabase.createClient(
 );
 
 console.log("Supabase collegato");
+
+async function salvaDati() {
+
+    const { data, error } = await supabaseClient
+    .from('storico_kpi')
+    .insert([
+        {
+            data: '2026-10-23',
+            fatturato: 41315,
+            garanzie: 1932,
+            servizi: 404,
+            trasporti: 1407,
+            scontrini: 330,
+            redemption: 35
+        }
+    ]);
+
+    if(error){
+        console.error(error);
+        alert("Errore");
+    }else{
+        alert("Salvato!");
+    }
+}
+    
 </script>
 </body>
 </html>
