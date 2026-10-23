@@ -210,6 +210,18 @@ td{
 </div>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+<script>
+const supabaseUrl = "IL_TUO_PROJECT_URL";
+const supabaseKey = "LA_TUA_PUBLISHABLE_KEY";
+
+const supabaseClient = supabase.createClient(
+    supabaseUrl,
+    supabaseKey
+);
+
+console.log("Supabase collegato");
+</script>
 </body>
 </html>
