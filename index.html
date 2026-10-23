@@ -209,6 +209,8 @@ td{
 
 </div>
 
+</div>
+
 <button onclick="salvaDati()" style="
 background:#003b6f;
 color:white;
@@ -224,14 +226,13 @@ Salva KPI
 
 <div class="table-box">
 
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
 const supabaseUrl = "https://tvcdjcklbucrjnccupxu.supabase.co";
 const supabaseKey = "sb_publishable_RhhQxnhvetML_Vh-Q6ZNVw_d2_X2z0N";
 
-const supabaseClient = supabase.createClient(
+const supabaseClient = window.supabase.createClient(
     supabaseUrl,
     supabaseKey
 );
