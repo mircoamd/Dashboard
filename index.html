@@ -244,16 +244,16 @@ async function salvaDati() {
     const { data, error } = await supabaseClient
     .from('storico_kpi')
     .insert([
-        {
-            data: '2026-10-23',
-            fatturato: 41315,
-            garanzie: 1932,
-            servizi: 404,
-            trasporti: 1407,
-            scontrini: 330,
-            redemption: 35
-        }
-    ]);
+    {
+        Date: '2026-10-23',
+        Fatturato: 41315,
+        Garanzie: 1932,
+        Servizi: 404,
+        Trasporti: 1407,
+        Scontrini: 330,
+        Redemption: 35
+    }
+]);
 
     if(error){
         console.error(error);
