@@ -254,8 +254,9 @@ async function salvaDati() {
 ]);
 
     if(error){
-        console.error(error);
-        alert("Errore");
+    console.error(error);
+    alert(error.message);
+}
     }else{
         alert("Salvato!");
     }
