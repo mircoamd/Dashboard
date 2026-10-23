@@ -239,28 +239,39 @@ console.log("Supabase collegato");
 
 async function salvaDati() {
 
-    const { data, error } = await supabaseClient
-    .from('storico_kpi')
-    .insert([
-    {
-        Date: '2026-10-23',
-        Fatturato: 41315,
-        Garanzie: 1932,
-        Servizi: 404,
-        Trasporti: 1407,
-        Scontrini: 330,
-        Redemption: 35
-    }
-]);
+    alert("Pulsante cliccato");
 
-    if(error){
-    console.error(error);
-    alert(error.message);
-}
-    }else{
-        alert("Salvato!");
+    try {
+
+        const { data, error } = await supabaseClient
+        .from('storico_kpi')
+        .insert([
+            {
+                Date: '2026-10-23',
+                Fatturato: 41315,
+                Garanzie: 1932,
+                Servizi: 404,
+                Trasporti: 1407,
+                Scontrini: 330,
+                Redemption: 35
+            }
+        ]);
+
+        console.log("Risultato:", data);
+        console.log("Errore:", error);
+
+        if(error){
+            alert(error.message);
+        } else {
+            alert("Salvato!");
+        }
+
+    } catch(err) {
+        console.error(err);
+        alert("ERRORE JS: " + err.message);
     }
 }
+  
     
 </script>
 </body>
